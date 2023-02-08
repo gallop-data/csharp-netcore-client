@@ -21,6 +21,7 @@ docs/GetEthCustomCollectionRiskRequestHarParams.md
 docs/GetEthCustomTokenRiskRequest.md
 docs/GetEthDefaultCollectionRiskRequest.md
 docs/GetEthDefaultTokenRiskRequest.md
+docs/GetEthEnsLookupRequest.md
 docs/GetEthHistoricalEventsRequest.md
 docs/GetEthHistoricalTransactionsRequest.md
 docs/GetEthLeaderBoardRequest.md
@@ -117,6 +118,7 @@ src/Org.OpenAPITools.Test/Model/GetEthCustomCollectionRiskRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthCustomTokenRiskRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthDefaultCollectionRiskRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthDefaultTokenRiskRequestTests.cs
+src/Org.OpenAPITools.Test/Model/GetEthEnsLookupRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthHistoricalEventsRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthHistoricalTransactionsRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthLeaderBoardRequestTests.cs
@@ -227,6 +229,7 @@ src/Org.OpenAPITools/Model/GetEthCustomCollectionRiskRequestHarParams.cs
 src/Org.OpenAPITools/Model/GetEthCustomTokenRiskRequest.cs
 src/Org.OpenAPITools/Model/GetEthDefaultCollectionRiskRequest.cs
 src/Org.OpenAPITools/Model/GetEthDefaultTokenRiskRequest.cs
+src/Org.OpenAPITools/Model/GetEthEnsLookupRequest.cs
 src/Org.OpenAPITools/Model/GetEthHistoricalEventsRequest.cs
 src/Org.OpenAPITools/Model/GetEthHistoricalTransactionsRequest.cs
 src/Org.OpenAPITools/Model/GetEthLeaderBoardRequest.cs

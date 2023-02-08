@@ -17,6 +17,7 @@ All URIs are relative to *https://api.prod.gallop.run/v1*
 | [**GetEthCustomTokenRisk**](EthereumApi.md#getethcustomtokenrisk) | **POST** /insights/eth/getCustomTokenRisk | Custom Volatility &amp; Risk Metrics by Token |
 | [**GetEthDefaultCollectionRisk**](EthereumApi.md#getethdefaultcollectionrisk) | **POST** /insights/eth/getDefaultCollectionRisk | Default Volatility &amp; Risk Metrics by Collection |
 | [**GetEthDefaultTokenRisk**](EthereumApi.md#getethdefaulttokenrisk) | **POST** /insights/eth/getDefaultTokenRisk | Default Volatility &amp; Risk Metrics by Token |
+| [**GetEthEnsLookup**](EthereumApi.md#getethenslookup) | **POST** /data/eth/getEnsLookup | ENS Lookup |
 | [**GetEthHistoricalEvents**](EthereumApi.md#getethhistoricalevents) | **POST** /data/eth/getHistoricalEvents | Marketplace Activity by Collection |
 | [**GetEthHistoricalTransactions**](EthereumApi.md#getethhistoricaltransactions) | **POST** /data/eth/getHistoricalTransactions | Historical Transactions by Collection |
 | [**GetEthLeaderBoard**](EthereumApi.md#getethleaderboard) | **POST** /analytics/eth/getLeaderBoard | Ethereum Leaderboard by Collection |
@@ -1252,6 +1253,100 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | An object containing a summary of volatility and risk metrics for a (set of) given token id(s). |  -  |
+| **400** | Bad request |  -  |
+| **403** | Unauthorized |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getethenslookup"></a>
+# **GetEthEnsLookup**
+> void GetEthEnsLookup (GetEthEnsLookupRequest getEthEnsLookupRequest = null)
+
+ENS Lookup
+
+Returns Ethereum Name Service data for a given wallet address
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class GetEthEnsLookupExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.prod.gallop.run/v1";
+            // Configure API key authorization: api_key
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new EthereumApi(config);
+            var getEthEnsLookupRequest = new GetEthEnsLookupRequest(); // GetEthEnsLookupRequest |  (optional) 
+
+            try
+            {
+                // ENS Lookup
+                apiInstance.GetEthEnsLookup(getEthEnsLookupRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling EthereumApi.GetEthEnsLookup: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetEthEnsLookupWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // ENS Lookup
+    apiInstance.GetEthEnsLookupWithHttpInfo(getEthEnsLookupRequest);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EthereumApi.GetEthEnsLookupWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **getEthEnsLookupRequest** | [**GetEthEnsLookupRequest**](GetEthEnsLookupRequest.md) |  | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 | **400** | Bad request |  -  |
 | **403** | Unauthorized |  -  |
 

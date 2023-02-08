@@ -199,6 +199,17 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test GetEthEnsLookup
+        /// </summary>
+        [Fact]
+        public void GetEthEnsLookupTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetEthEnsLookupRequest getEthEnsLookupRequest = null;
+            //instance.GetEthEnsLookup(getEthEnsLookupRequest);
+        }
+
+        /// <summary>
         /// Test GetEthHistoricalEvents
         /// </summary>
         [Fact]
