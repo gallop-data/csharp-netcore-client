@@ -107,7 +107,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *EthereumApi* | [**GetEthCollectionFloorPriceOHLC**](docs/EthereumApi.md#getethcollectionfloorpriceohlc) | **POST** /analytics/eth/getCollectionFloorPriceOHLC | Intraday Marketplace Floor Price by Collection
 *EthereumApi* | [**GetEthCollectionForecasts**](docs/EthereumApi.md#getethcollectionforecasts) | **POST** /insights/eth/getCollectionForecasts | Price Forecast by Collection
-*EthereumApi* | [**GetEthCollectionListingsOHLC**](docs/EthereumApi.md#getethcollectionlistingsohlc) | **POST** /analytics/eth/getCollectionListingsOHLC | Collection Price Listings Candlesticks
+*EthereumApi* | [**GetEthCollectionListingsOHLC**](docs/EthereumApi.md#getethcollectionlistingsohlc) | **POST** /analytics/eth/getCollectionListingsOHLC | Collection Floor Price and Listings Candlesticks
 *EthereumApi* | [**GetEthCollectionOwners**](docs/EthereumApi.md#getethcollectionowners) | **POST** /data/eth/getCollectionOwners | Wallet Owners by Collection
 *EthereumApi* | [**GetEthCollectionPriceDiff**](docs/EthereumApi.md#getethcollectionpricediff) | **POST** /analytics/eth/getCollectionPriceDiff | Price Differentiation by Trait
 *EthereumApi* | [**GetEthCollectionSalesOHLC**](docs/EthereumApi.md#getethcollectionsalesohlc) | **POST** /analytics/eth/getCollectionSalesOHLC | Collection Sales Price Candlesticks

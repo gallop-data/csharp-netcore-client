@@ -69,13 +69,12 @@ namespace Org.OpenAPITools.Model
         /// Initializes a new instance of the <see cref="GetEthCollectionListingsOHLCRequest" /> class.
         /// </summary>
         /// <param name="collectionAddress">The Ethereum contract address to identify the collection. (required).</param>
-        /// <param name="frequency">The interval at which to return OHLC, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc..</param>
+        /// <param name="floorOnly">If &#x60;true&#x60;, report only historical floor prices. Otherwise, report OHFC candlesticks, number of active listings, number of unique owners and the average age of open listings..</param>
+        /// <param name="frequency">The interval at which to return Floor prices / OHLF, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc. Must be &gt;&#x3D; &#x60;6H&#x60;.</param>
         /// <param name="reptCurr">The currency to report results in.</param>
-        /// <param name="listingStartDate">The ISO 8601 date/datetime of the oldest listing to pull for calculations.</param>
-        /// <param name="listingEndDate">The ISO 8601 date/datetime of the most recent listing to pull for calculations.</param>
         /// <param name="reportStartDate">The ISO 8601 start date/datetime to return results for.</param>
         /// <param name="reportEndDate">The ISO 8601 end date/datetime to return results for.</param>
-        public GetEthCollectionListingsOHLCRequest(string collectionAddress = default(string), string frequency = default(string), ReptCurrEnum? reptCurr = default(ReptCurrEnum?), string listingStartDate = default(string), string listingEndDate = default(string), string reportStartDate = default(string), string reportEndDate = default(string))
+        public GetEthCollectionListingsOHLCRequest(string collectionAddress = default(string), bool floorOnly = default(bool), string frequency = default(string), ReptCurrEnum? reptCurr = default(ReptCurrEnum?), string reportStartDate = default(string), string reportEndDate = default(string))
         {
             // to ensure "collectionAddress" is required (not null)
             if (collectionAddress == null)
@@ -83,10 +82,9 @@ namespace Org.OpenAPITools.Model
                 throw new ArgumentNullException("collectionAddress is a required property for GetEthCollectionListingsOHLCRequest and cannot be null");
             }
             this.CollectionAddress = collectionAddress;
+            this.FloorOnly = floorOnly;
             this.Frequency = frequency;
             this.ReptCurr = reptCurr;
-            this.ListingStartDate = listingStartDate;
-            this.ListingEndDate = listingEndDate;
             this.ReportStartDate = reportStartDate;
             this.ReportEndDate = reportEndDate;
         }
@@ -99,25 +97,18 @@ namespace Org.OpenAPITools.Model
         public string CollectionAddress { get; set; }
 
         /// <summary>
-        /// The interval at which to return OHLC, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.
+        /// If &#x60;true&#x60;, report only historical floor prices. Otherwise, report OHFC candlesticks, number of active listings, number of unique owners and the average age of open listings.
         /// </summary>
-        /// <value>The interval at which to return OHLC, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.</value>
+        /// <value>If &#x60;true&#x60;, report only historical floor prices. Otherwise, report OHFC candlesticks, number of active listings, number of unique owners and the average age of open listings.</value>
+        [DataMember(Name = "floor_only", EmitDefaultValue = true)]
+        public bool FloorOnly { get; set; }
+
+        /// <summary>
+        /// The interval at which to return Floor prices / OHLF, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc. Must be &gt;&#x3D; &#x60;6H&#x60;
+        /// </summary>
+        /// <value>The interval at which to return Floor prices / OHLF, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc. Must be &gt;&#x3D; &#x60;6H&#x60;</value>
         [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
-
-        /// <summary>
-        /// The ISO 8601 date/datetime of the oldest listing to pull for calculations
-        /// </summary>
-        /// <value>The ISO 8601 date/datetime of the oldest listing to pull for calculations</value>
-        [DataMember(Name = "listing_start_date", EmitDefaultValue = false)]
-        public string ListingStartDate { get; set; }
-
-        /// <summary>
-        /// The ISO 8601 date/datetime of the most recent listing to pull for calculations
-        /// </summary>
-        /// <value>The ISO 8601 date/datetime of the most recent listing to pull for calculations</value>
-        [DataMember(Name = "listing_end_date", EmitDefaultValue = false)]
-        public string ListingEndDate { get; set; }
 
         /// <summary>
         /// The ISO 8601 start date/datetime to return results for
@@ -142,10 +133,9 @@ namespace Org.OpenAPITools.Model
             StringBuilder sb = new StringBuilder();
             sb.Append("class GetEthCollectionListingsOHLCRequest {\n");
             sb.Append("  CollectionAddress: ").Append(CollectionAddress).Append("\n");
+            sb.Append("  FloorOnly: ").Append(FloorOnly).Append("\n");
             sb.Append("  Frequency: ").Append(Frequency).Append("\n");
             sb.Append("  ReptCurr: ").Append(ReptCurr).Append("\n");
-            sb.Append("  ListingStartDate: ").Append(ListingStartDate).Append("\n");
-            sb.Append("  ListingEndDate: ").Append(ListingEndDate).Append("\n");
             sb.Append("  ReportStartDate: ").Append(ReportStartDate).Append("\n");
             sb.Append("  ReportEndDate: ").Append(ReportEndDate).Append("\n");
             sb.Append("}\n");
@@ -189,6 +179,10 @@ namespace Org.OpenAPITools.Model
                     this.CollectionAddress.Equals(input.CollectionAddress))
                 ) && 
                 (
+                    this.FloorOnly == input.FloorOnly ||
+                    this.FloorOnly.Equals(input.FloorOnly)
+                ) && 
+                (
                     this.Frequency == input.Frequency ||
                     (this.Frequency != null &&
                     this.Frequency.Equals(input.Frequency))
@@ -196,16 +190,6 @@ namespace Org.OpenAPITools.Model
                 (
                     this.ReptCurr == input.ReptCurr ||
                     this.ReptCurr.Equals(input.ReptCurr)
-                ) && 
-                (
-                    this.ListingStartDate == input.ListingStartDate ||
-                    (this.ListingStartDate != null &&
-                    this.ListingStartDate.Equals(input.ListingStartDate))
-                ) && 
-                (
-                    this.ListingEndDate == input.ListingEndDate ||
-                    (this.ListingEndDate != null &&
-                    this.ListingEndDate.Equals(input.ListingEndDate))
                 ) && 
                 (
                     this.ReportStartDate == input.ReportStartDate ||
@@ -232,19 +216,12 @@ namespace Org.OpenAPITools.Model
                 {
                     hashCode = (hashCode * 59) + this.CollectionAddress.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.FloorOnly.GetHashCode();
                 if (this.Frequency != null)
                 {
                     hashCode = (hashCode * 59) + this.Frequency.GetHashCode();
                 }
                 hashCode = (hashCode * 59) + this.ReptCurr.GetHashCode();
-                if (this.ListingStartDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.ListingStartDate.GetHashCode();
-                }
-                if (this.ListingEndDate != null)
-                {
-                    hashCode = (hashCode * 59) + this.ListingEndDate.GetHashCode();
-                }
                 if (this.ReportStartDate != null)
                 {
                     hashCode = (hashCode * 59) + this.ReportStartDate.GetHashCode();

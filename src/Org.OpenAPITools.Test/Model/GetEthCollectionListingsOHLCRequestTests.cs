@@ -66,6 +66,14 @@ namespace Org.OpenAPITools.Test.Model
             // TODO unit test for the property 'CollectionAddress'
         }
         /// <summary>
+        /// Test the property 'FloorOnly'
+        /// </summary>
+        [Fact]
+        public void FloorOnlyTest()
+        {
+            // TODO unit test for the property 'FloorOnly'
+        }
+        /// <summary>
         /// Test the property 'Frequency'
         /// </summary>
         [Fact]
@@ -80,22 +88,6 @@ namespace Org.OpenAPITools.Test.Model
         public void ReptCurrTest()
         {
             // TODO unit test for the property 'ReptCurr'
-        }
-        /// <summary>
-        /// Test the property 'ListingStartDate'
-        /// </summary>
-        [Fact]
-        public void ListingStartDateTest()
-        {
-            // TODO unit test for the property 'ListingStartDate'
-        }
-        /// <summary>
-        /// Test the property 'ListingEndDate'
-        /// </summary>
-        [Fact]
-        public void ListingEndDateTest()
-        {
-            // TODO unit test for the property 'ListingEndDate'
         }
         /// <summary>
         /// Test the property 'ReportStartDate'

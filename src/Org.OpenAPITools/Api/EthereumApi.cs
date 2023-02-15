@@ -74,10 +74,10 @@ namespace Org.OpenAPITools.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> GetEthCollectionForecastsWithHttpInfo(GetEthCollectionForecastsRequest getEthCollectionForecastsRequest = default(GetEthCollectionForecastsRequest), int operationIndex = 0);
         /// <summary>
-        /// Collection Price Listings Candlesticks
+        /// Collection Floor Price and Listings Candlesticks
         /// </summary>
         /// <remarks>
-        /// Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>
@@ -86,10 +86,10 @@ namespace Org.OpenAPITools.Api
         void GetEthCollectionListingsOHLC(GetEthCollectionListingsOHLCRequest getEthCollectionListingsOHLCRequest = default(GetEthCollectionListingsOHLCRequest), int operationIndex = 0);
 
         /// <summary>
-        /// Collection Price Listings Candlesticks
+        /// Collection Floor Price and Listings Candlesticks
         /// </summary>
         /// <remarks>
-        /// Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>
@@ -800,10 +800,10 @@ namespace Org.OpenAPITools.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetEthCollectionForecastsWithHttpInfoAsync(GetEthCollectionForecastsRequest getEthCollectionForecastsRequest = default(GetEthCollectionForecastsRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// Collection Price Listings Candlesticks
+        /// Collection Floor Price and Listings Candlesticks
         /// </summary>
         /// <remarks>
-        /// Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>
@@ -813,10 +813,10 @@ namespace Org.OpenAPITools.Api
         System.Threading.Tasks.Task GetEthCollectionListingsOHLCAsync(GetEthCollectionListingsOHLCRequest getEthCollectionListingsOHLCRequest = default(GetEthCollectionListingsOHLCRequest), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// Collection Price Listings Candlesticks
+        /// Collection Floor Price and Listings Candlesticks
         /// </summary>
         /// <remarks>
-        /// Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </remarks>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>
@@ -1929,7 +1929,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Collection Price Listings Candlesticks Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Collection Floor Price and Listings Candlesticks Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>
@@ -1941,7 +1941,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Collection Price Listings Candlesticks Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Collection Floor Price and Listings Candlesticks Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>
@@ -1998,7 +1998,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Collection Price Listings Candlesticks Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Collection Floor Price and Listings Candlesticks Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>
@@ -2011,7 +2011,7 @@ namespace Org.OpenAPITools.Api
         }
 
         /// <summary>
-        /// Collection Price Listings Candlesticks Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+        /// Collection Floor Price and Listings Candlesticks Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
         /// </summary>
         /// <exception cref="Org.OpenAPITools.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="getEthCollectionListingsOHLCRequest"> (optional)</param>

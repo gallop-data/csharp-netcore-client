@@ -6,7 +6,7 @@ All URIs are relative to *https://api.prod.gallop.run/v1*
 |--------|--------------|-------------|
 | [**GetEthCollectionFloorPriceOHLC**](EthereumApi.md#getethcollectionfloorpriceohlc) | **POST** /analytics/eth/getCollectionFloorPriceOHLC | Intraday Marketplace Floor Price by Collection |
 | [**GetEthCollectionForecasts**](EthereumApi.md#getethcollectionforecasts) | **POST** /insights/eth/getCollectionForecasts | Price Forecast by Collection |
-| [**GetEthCollectionListingsOHLC**](EthereumApi.md#getethcollectionlistingsohlc) | **POST** /analytics/eth/getCollectionListingsOHLC | Collection Price Listings Candlesticks |
+| [**GetEthCollectionListingsOHLC**](EthereumApi.md#getethcollectionlistingsohlc) | **POST** /analytics/eth/getCollectionListingsOHLC | Collection Floor Price and Listings Candlesticks |
 | [**GetEthCollectionOwners**](EthereumApi.md#getethcollectionowners) | **POST** /data/eth/getCollectionOwners | Wallet Owners by Collection |
 | [**GetEthCollectionPriceDiff**](EthereumApi.md#getethcollectionpricediff) | **POST** /analytics/eth/getCollectionPriceDiff | Price Differentiation by Trait |
 | [**GetEthCollectionSalesOHLC**](EthereumApi.md#getethcollectionsalesohlc) | **POST** /analytics/eth/getCollectionSalesOHLC | Collection Sales Price Candlesticks |
@@ -228,9 +228,9 @@ void (empty response body)
 # **GetEthCollectionListingsOHLC**
 > void GetEthCollectionListingsOHLC (GetEthCollectionListingsOHLCRequest getEthCollectionListingsOHLCRequest = null)
 
-Collection Price Listings Candlesticks
+Collection Floor Price and Listings Candlesticks
 
-Returns open, high, low, close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings and the number of unique owners
+Returns historical floor price or more extensive open / high / floor / close candlesticks for collection listings at marketplaces at a selected time interval, as well as the number of active listings, the number of unique owners and the average age of open listings
 
 ### Example
 ```csharp
@@ -258,7 +258,7 @@ namespace Example
 
             try
             {
-                // Collection Price Listings Candlesticks
+                // Collection Floor Price and Listings Candlesticks
                 apiInstance.GetEthCollectionListingsOHLC(getEthCollectionListingsOHLCRequest);
             }
             catch (ApiException  e)
@@ -278,7 +278,7 @@ This returns an ApiResponse object which contains the response data, status code
 ```csharp
 try
 {
-    // Collection Price Listings Candlesticks
+    // Collection Floor Price and Listings Candlesticks
     apiInstance.GetEthCollectionListingsOHLCWithHttpInfo(getEthCollectionListingsOHLCRequest);
 }
 catch (ApiException e)
