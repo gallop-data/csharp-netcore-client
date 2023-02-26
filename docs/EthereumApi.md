@@ -33,6 +33,7 @@ All URIs are relative to *https://api.prod.gallop.run/v1*
 | [**GetEthWalletLabels**](EthereumApi.md#getethwalletlabels) | **POST** /insights/eth/getWalletLabels | Wallet Activity Labels |
 | [**GetEthWalletNFTs**](EthereumApi.md#getethwalletnfts) | **POST** /data/eth/getWalletNFTs | Tokens Owned by Wallet |
 | [**GetEthWalletTransactions**](EthereumApi.md#getethwallettransactions) | **POST** /data/eth/getWalletTransactions | Historical Token Transactions by Wallet |
+| [**GetEthWalletValuation**](EthereumApi.md#getethwalletvaluation) | **POST** /insights/eth/getWalletValuation | Value All Tokens Owned by Wallet |
 | [**GetEthWashTrade**](EthereumApi.md#getethwashtrade) | **POST** /analytics/eth/getWashTrade | Wash Trades by Transaction |
 | [**GetEthWashTransactions**](EthereumApi.md#getethwashtransactions) | **POST** /analytics/eth/getWashTransactions | Wash Trades by Collection |
 
@@ -2757,6 +2758,100 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 | **200** | OK |  -  |
+| **400** | Bad request |  -  |
+| **403** | Unauthorized |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getethwalletvaluation"></a>
+# **GetEthWalletValuation**
+> void GetEthWalletValuation (GetPolWalletNFTsRequest getPolWalletNFTsRequest = null)
+
+Value All Tokens Owned by Wallet
+
+Returns valuation of all tokens owned for a given wallet
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class GetEthWalletValuationExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.prod.gallop.run/v1";
+            // Configure API key authorization: api_key
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new EthereumApi(config);
+            var getPolWalletNFTsRequest = new GetPolWalletNFTsRequest(); // GetPolWalletNFTsRequest |  (optional) 
+
+            try
+            {
+                // Value All Tokens Owned by Wallet
+                apiInstance.GetEthWalletValuation(getPolWalletNFTsRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling EthereumApi.GetEthWalletValuation: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetEthWalletValuationWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Value All Tokens Owned by Wallet
+    apiInstance.GetEthWalletValuationWithHttpInfo(getPolWalletNFTsRequest);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EthereumApi.GetEthWalletValuationWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **getPolWalletNFTsRequest** | [**GetPolWalletNFTsRequest**](GetPolWalletNFTsRequest.md) |  | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | An object containing the tokens owned by this wallet |  -  |
 | **400** | Bad request |  -  |
 | **403** | Unauthorized |  -  |
 

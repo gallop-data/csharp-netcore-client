@@ -42,7 +42,8 @@ namespace Org.OpenAPITools.Model
         /// </summary>
         /// <param name="collectionAddress">Array of collection addresses (required).</param>
         /// <param name="subCollectionTags">Array of sub collections (e.g. Art Blocks).</param>
-        public GetEthMarketplaceDataRequest(List<string> collectionAddress = default(List<string>), List<string> subCollectionTags = default(List<string>))
+        /// <param name="normalized">Return normalized data across marketplaces.</param>
+        public GetEthMarketplaceDataRequest(List<string> collectionAddress = default(List<string>), List<string> subCollectionTags = default(List<string>), bool normalized = default(bool))
         {
             // to ensure "collectionAddress" is required (not null)
             if (collectionAddress == null)
@@ -51,6 +52,7 @@ namespace Org.OpenAPITools.Model
             }
             this.CollectionAddress = collectionAddress;
             this.SubCollectionTags = subCollectionTags;
+            this.Normalized = normalized;
         }
 
         /// <summary>
@@ -68,6 +70,13 @@ namespace Org.OpenAPITools.Model
         public List<string> SubCollectionTags { get; set; }
 
         /// <summary>
+        /// Return normalized data across marketplaces
+        /// </summary>
+        /// <value>Return normalized data across marketplaces</value>
+        [DataMember(Name = "normalized", EmitDefaultValue = true)]
+        public bool Normalized { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -77,6 +86,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("class GetEthMarketplaceDataRequest {\n");
             sb.Append("  CollectionAddress: ").Append(CollectionAddress).Append("\n");
             sb.Append("  SubCollectionTags: ").Append(SubCollectionTags).Append("\n");
+            sb.Append("  Normalized: ").Append(Normalized).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +133,10 @@ namespace Org.OpenAPITools.Model
                     this.SubCollectionTags != null &&
                     input.SubCollectionTags != null &&
                     this.SubCollectionTags.SequenceEqual(input.SubCollectionTags)
+                ) && 
+                (
+                    this.Normalized == input.Normalized ||
+                    this.Normalized.Equals(input.Normalized)
                 );
         }
 
@@ -143,6 +157,7 @@ namespace Org.OpenAPITools.Model
                 {
                     hashCode = (hashCode * 59) + this.SubCollectionTags.GetHashCode();
                 }
+                hashCode = (hashCode * 59) + this.Normalized.GetHashCode();
                 return hashCode;
             }
         }

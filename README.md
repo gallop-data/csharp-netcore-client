@@ -134,6 +134,7 @@ Class | Method | HTTP request | Description
 *EthereumApi* | [**GetEthWalletLabels**](docs/EthereumApi.md#getethwalletlabels) | **POST** /insights/eth/getWalletLabels | Wallet Activity Labels
 *EthereumApi* | [**GetEthWalletNFTs**](docs/EthereumApi.md#getethwalletnfts) | **POST** /data/eth/getWalletNFTs | Tokens Owned by Wallet
 *EthereumApi* | [**GetEthWalletTransactions**](docs/EthereumApi.md#getethwallettransactions) | **POST** /data/eth/getWalletTransactions | Historical Token Transactions by Wallet
+*EthereumApi* | [**GetEthWalletValuation**](docs/EthereumApi.md#getethwalletvaluation) | **POST** /insights/eth/getWalletValuation | Value All Tokens Owned by Wallet
 *EthereumApi* | [**GetEthWashTrade**](docs/EthereumApi.md#getethwashtrade) | **POST** /analytics/eth/getWashTrade | Wash Trades by Transaction
 *EthereumApi* | [**GetEthWashTransactions**](docs/EthereumApi.md#getethwashtransactions) | **POST** /analytics/eth/getWashTransactions | Wash Trades by Collection
 *PolygonApi* | [**GetPolCollectionForecasts**](docs/PolygonApi.md#getpolcollectionforecasts) | **POST** /insights/pol/getCollectionForecasts | Price Forecast by Collection

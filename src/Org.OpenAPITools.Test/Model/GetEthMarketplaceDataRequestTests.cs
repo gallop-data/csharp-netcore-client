@@ -73,6 +73,14 @@ namespace Org.OpenAPITools.Test.Model
         {
             // TODO unit test for the property 'SubCollectionTags'
         }
+        /// <summary>
+        /// Test the property 'Normalized'
+        /// </summary>
+        [Fact]
+        public void NormalizedTest()
+        {
+            // TODO unit test for the property 'Normalized'
+        }
 
     }
 

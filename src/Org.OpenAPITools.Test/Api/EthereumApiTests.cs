@@ -375,6 +375,17 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test GetEthWalletValuation
+        /// </summary>
+        [Fact]
+        public void GetEthWalletValuationTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetPolWalletNFTsRequest getPolWalletNFTsRequest = null;
+            //instance.GetEthWalletValuation(getPolWalletNFTsRequest);
+        }
+
+        /// <summary>
         /// Test GetEthWashTrade
         /// </summary>
         [Fact]
