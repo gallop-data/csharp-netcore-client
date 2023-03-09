@@ -21,6 +21,8 @@ All URIs are relative to *https://api.prod.gallop.run/v1*
 | [**GetEthHistoricalEvents**](EthereumApi.md#getethhistoricalevents) | **POST** /data/eth/getHistoricalEvents | Marketplace Activity by Collection |
 | [**GetEthHistoricalTransactions**](EthereumApi.md#getethhistoricaltransactions) | **POST** /data/eth/getHistoricalTransactions | Historical Transactions by Collection |
 | [**GetEthLeaderBoard**](EthereumApi.md#getethleaderboard) | **POST** /analytics/eth/getLeaderBoard | Ethereum Leaderboard by Collection |
+| [**GetEthLiveListings**](EthereumApi.md#getethlivelistings) | **POST** /data/eth/getLiveListings | Collection live listings |
+| [**GetEthLiveOffers**](EthereumApi.md#getethliveoffers) | **POST** /data/eth/getLiveOffers | Collection live offers |
 | [**GetEthMarketplaceData**](EthereumApi.md#getethmarketplacedata) | **POST** /data/eth/getMarketplaceData | Collection Summary by Marketplace |
 | [**GetEthMarketplaceFloorPrice**](EthereumApi.md#getethmarketplacefloorprice) | **POST** /data/eth/getMarketplaceFloorPrice | Marketplace Floor Price by Collection |
 | [**GetEthMarketplaceTraitData**](EthereumApi.md#getethmarketplacetraitdata) | **POST** /data/eth/getMarketplaceTraitData | Collection Listings by Trait &amp; Marketplace |
@@ -1611,6 +1613,194 @@ catch (ApiException e)
 | Name | Type | Description | Notes |
 |------|------|-------------|-------|
 | **getEthLeaderBoardRequest** | [**GetEthLeaderBoardRequest**](GetEthLeaderBoardRequest.md) |  | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **400** | Bad request |  -  |
+| **403** | Unauthorized |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getethlivelistings"></a>
+# **GetEthLiveListings**
+> void GetEthLiveListings (GetEthLiveListingsRequest getEthLiveListingsRequest = null)
+
+Collection live listings
+
+Returns live listings for a collection
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class GetEthLiveListingsExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.prod.gallop.run/v1";
+            // Configure API key authorization: api_key
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new EthereumApi(config);
+            var getEthLiveListingsRequest = new GetEthLiveListingsRequest(); // GetEthLiveListingsRequest |  (optional) 
+
+            try
+            {
+                // Collection live listings
+                apiInstance.GetEthLiveListings(getEthLiveListingsRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling EthereumApi.GetEthLiveListings: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetEthLiveListingsWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Collection live listings
+    apiInstance.GetEthLiveListingsWithHttpInfo(getEthLiveListingsRequest);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EthereumApi.GetEthLiveListingsWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **getEthLiveListingsRequest** | [**GetEthLiveListingsRequest**](GetEthLiveListingsRequest.md) |  | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[api_key](../README.md#api_key)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **400** | Bad request |  -  |
+| **403** | Unauthorized |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="getethliveoffers"></a>
+# **GetEthLiveOffers**
+> void GetEthLiveOffers (GetEthLiveListingsRequest getEthLiveListingsRequest = null)
+
+Collection live offers
+
+Returns live offers for a collection
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using Org.OpenAPITools.Api;
+using Org.OpenAPITools.Client;
+using Org.OpenAPITools.Model;
+
+namespace Example
+{
+    public class GetEthLiveOffersExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://api.prod.gallop.run/v1";
+            // Configure API key authorization: api_key
+            config.AddApiKey("x-api-key", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // config.AddApiKeyPrefix("x-api-key", "Bearer");
+
+            var apiInstance = new EthereumApi(config);
+            var getEthLiveListingsRequest = new GetEthLiveListingsRequest(); // GetEthLiveListingsRequest |  (optional) 
+
+            try
+            {
+                // Collection live offers
+                apiInstance.GetEthLiveOffers(getEthLiveListingsRequest);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling EthereumApi.GetEthLiveOffers: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the GetEthLiveOffersWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // Collection live offers
+    apiInstance.GetEthLiveOffersWithHttpInfo(getEthLiveListingsRequest);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling EthereumApi.GetEthLiveOffersWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **getEthLiveListingsRequest** | [**GetEthLiveListingsRequest**](GetEthLiveListingsRequest.md) |  | [optional]  |
 
 ### Return type
 

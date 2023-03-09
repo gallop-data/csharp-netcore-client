@@ -25,6 +25,7 @@ docs/GetEthEnsLookupRequest.md
 docs/GetEthHistoricalEventsRequest.md
 docs/GetEthHistoricalTransactionsRequest.md
 docs/GetEthLeaderBoardRequest.md
+docs/GetEthLiveListingsRequest.md
 docs/GetEthMarketplaceDataRequest.md
 docs/GetEthMarketplaceFloorPriceRequest.md
 docs/GetEthMarketplaceTraitDataRequest.md
@@ -122,6 +123,7 @@ src/Org.OpenAPITools.Test/Model/GetEthEnsLookupRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthHistoricalEventsRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthHistoricalTransactionsRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthLeaderBoardRequestTests.cs
+src/Org.OpenAPITools.Test/Model/GetEthLiveListingsRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthMarketplaceDataRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthMarketplaceFloorPriceRequestTests.cs
 src/Org.OpenAPITools.Test/Model/GetEthMarketplaceTraitDataRequestTests.cs
@@ -233,6 +235,7 @@ src/Org.OpenAPITools/Model/GetEthEnsLookupRequest.cs
 src/Org.OpenAPITools/Model/GetEthHistoricalEventsRequest.cs
 src/Org.OpenAPITools/Model/GetEthHistoricalTransactionsRequest.cs
 src/Org.OpenAPITools/Model/GetEthLeaderBoardRequest.cs
+src/Org.OpenAPITools/Model/GetEthLiveListingsRequest.cs
 src/Org.OpenAPITools/Model/GetEthMarketplaceDataRequest.cs
 src/Org.OpenAPITools/Model/GetEthMarketplaceFloorPriceRequest.cs
 src/Org.OpenAPITools/Model/GetEthMarketplaceTraitDataRequest.cs

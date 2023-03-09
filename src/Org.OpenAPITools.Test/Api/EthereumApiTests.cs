@@ -243,6 +243,28 @@ namespace Org.OpenAPITools.Test.Api
         }
 
         /// <summary>
+        /// Test GetEthLiveListings
+        /// </summary>
+        [Fact]
+        public void GetEthLiveListingsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetEthLiveListingsRequest getEthLiveListingsRequest = null;
+            //instance.GetEthLiveListings(getEthLiveListingsRequest);
+        }
+
+        /// <summary>
+        /// Test GetEthLiveOffers
+        /// </summary>
+        [Fact]
+        public void GetEthLiveOffersTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //GetEthLiveListingsRequest getEthLiveListingsRequest = null;
+            //instance.GetEthLiveOffers(getEthLiveListingsRequest);
+        }
+
+        /// <summary>
         /// Test GetEthMarketplaceData
         /// </summary>
         [Fact]
