@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -96,6 +97,7 @@ namespace Org.OpenAPITools.Model
         /// The collection address to search.
         /// </summary>
         /// <value>The collection address to search.</value>
+        /// <example>&quot;0xfbe3ab0cbfbd17d06bdd73aa3f55aaf038720f59&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -110,6 +112,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 

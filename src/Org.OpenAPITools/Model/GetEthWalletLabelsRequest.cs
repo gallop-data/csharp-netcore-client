@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// The EVM compatible wallet address
         /// </summary>
         /// <value>The EVM compatible wallet address</value>
+        /// <example>&quot;0xcf561ea02950b819b0999ab3c3b43243d53e9b51&quot;</example>
         [DataMember(Name = "wallet_address", IsRequired = true, EmitDefaultValue = true)]
         public string WalletAddress { get; set; }
 

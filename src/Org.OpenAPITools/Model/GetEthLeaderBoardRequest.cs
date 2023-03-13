@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -111,6 +112,7 @@ namespace Org.OpenAPITools.Model
         /// The requested time interval
         /// </summary>
         /// <value>The requested time interval</value>
+        /// <example>&quot;one_day&quot;</example>
         [DataMember(Name = "interval", IsRequired = true, EmitDefaultValue = true)]
         public IntervalEnum Interval { get; set; }
         /// <summary>
@@ -139,6 +141,7 @@ namespace Org.OpenAPITools.Model
         /// The requested calculation metric
         /// </summary>
         /// <value>The requested calculation metric</value>
+        /// <example>&quot;eth_volume&quot;</example>
         [DataMember(Name = "ranking_metric", IsRequired = true, EmitDefaultValue = true)]
         public RankingMetricEnum RankingMetric { get; set; }
         /// <summary>
@@ -165,6 +168,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 

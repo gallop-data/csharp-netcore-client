@@ -59,6 +59,7 @@ namespace Org.OpenAPITools.Model
         /// The Gallop tag for the Solana collection. Please see sol/getCollections endpoint.
         /// </summary>
         /// <value>The Gallop tag for the Solana collection. Please see sol/getCollections endpoint.</value>
+        /// <example>&quot;portals&quot;</example>
         [DataMember(Name = "collection_tag", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionTag { get; set; }
 

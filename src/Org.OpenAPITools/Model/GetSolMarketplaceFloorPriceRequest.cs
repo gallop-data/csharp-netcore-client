@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -84,6 +85,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 

@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -94,6 +95,7 @@ namespace Org.OpenAPITools.Model
         /// The wallet address to search.
         /// </summary>
         /// <value>The wallet address to search.</value>
+        /// <example>&quot;0xab0cda4cc21207fd9433356afe9428b6fac8a8a5&quot;</example>
         [DataMember(Name = "wallet_address", IsRequired = true, EmitDefaultValue = true)]
         public string WalletAddress { get; set; }
 
@@ -101,6 +103,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 

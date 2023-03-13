@@ -58,6 +58,7 @@ namespace Org.OpenAPITools.Model
         /// The currency to report results in
         /// </summary>
         /// <value>The currency to report results in</value>
+        /// <example>&quot;eth&quot;</example>
         [DataMember(Name = "rept_curr", EmitDefaultValue = false)]
         public ReptCurrEnum? ReptCurr { get; set; }
         /// <summary>
@@ -93,6 +94,7 @@ namespace Org.OpenAPITools.Model
         /// The Ethereum contract address to identify the collection.
         /// </summary>
         /// <value>The Ethereum contract address to identify the collection.</value>
+        /// <example>&quot;0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -100,6 +102,7 @@ namespace Org.OpenAPITools.Model
         /// If &#x60;true&#x60;, report only historical floor prices. Otherwise, report OHFC candlesticks, number of active listings, number of unique owners and the average age of open listings.
         /// </summary>
         /// <value>If &#x60;true&#x60;, report only historical floor prices. Otherwise, report OHFC candlesticks, number of active listings, number of unique owners and the average age of open listings.</value>
+        /// <example>true</example>
         [DataMember(Name = "floor_only", EmitDefaultValue = true)]
         public bool FloorOnly { get; set; }
 
@@ -107,6 +110,7 @@ namespace Org.OpenAPITools.Model
         /// The interval at which to return Floor prices / OHLF, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc. Must be &gt;&#x3D; &#x60;6H&#x60;
         /// </summary>
         /// <value>The interval at which to return Floor prices / OHLF, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc. Must be &gt;&#x3D; &#x60;6H&#x60;</value>
+        /// <example>&quot;1D&quot;</example>
         [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
@@ -114,6 +118,7 @@ namespace Org.OpenAPITools.Model
         /// The ISO 8601 start date/datetime to return results for
         /// </summary>
         /// <value>The ISO 8601 start date/datetime to return results for</value>
+        /// <example>&quot;2023-01-01&quot;</example>
         [DataMember(Name = "report_start_date", EmitDefaultValue = false)]
         public string ReportStartDate { get; set; }
 
@@ -121,6 +126,7 @@ namespace Org.OpenAPITools.Model
         /// The ISO 8601 end date/datetime to return results for
         /// </summary>
         /// <value>The ISO 8601 end date/datetime to return results for</value>
+        /// <example>&quot;2023-01-04&quot;</example>
         [DataMember(Name = "report_end_date", EmitDefaultValue = false)]
         public string ReportEndDate { get; set; }
 

@@ -89,6 +89,14 @@ namespace Org.OpenAPITools.Test.Model
             // TODO unit test for the property 'PageSize'
         }
         /// <summary>
+        /// Test the property 'EventDate'
+        /// </summary>
+        [Fact]
+        public void EventDateTest()
+        {
+            // TODO unit test for the property 'EventDate'
+        }
+        /// <summary>
         /// Test the property 'EventType'
         /// </summary>
         [Fact]

@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// The account address to query.
         /// </summary>
         /// <value>The account address to query.</value>
+        /// <example>&quot;6CDuoSsn4ZRVvcBMdh9NEKkJebF3AFMdYTnPV4YrfEy6&quot;</example>
         [DataMember(Name = "account_address", IsRequired = true, EmitDefaultValue = true)]
         public string AccountAddress { get; set; }
 

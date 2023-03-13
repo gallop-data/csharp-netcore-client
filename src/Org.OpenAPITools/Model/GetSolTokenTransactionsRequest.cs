@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -98,6 +99,7 @@ namespace Org.OpenAPITools.Model
         /// The mint address of the token.
         /// </summary>
         /// <value>The mint address of the token.</value>
+        /// <example>&quot;5uarH96GLf4APmipQRrsD3SsW4K77zRPtWGwETcyz5GE&quot;</example>
         [DataMember(Name = "mint_address", IsRequired = true, EmitDefaultValue = true)]
         public string MintAddress { get; set; }
 
@@ -105,6 +107,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 
@@ -112,6 +115,7 @@ namespace Org.OpenAPITools.Model
         /// The earliest block timestamp.
         /// </summary>
         /// <value>The earliest block timestamp.</value>
+        /// <example>&quot;2021-01-01&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -119,6 +123,7 @@ namespace Org.OpenAPITools.Model
         /// The latest block timestamp.
         /// </summary>
         /// <value>The latest block timestamp.</value>
+        /// <example>&quot;2022-02-25&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 

@@ -58,6 +58,7 @@ namespace Org.OpenAPITools.Model
         /// The currency to report results in
         /// </summary>
         /// <value>The currency to report results in</value>
+        /// <example>&quot;eth&quot;</example>
         [DataMember(Name = "rept_curr", EmitDefaultValue = false)]
         public ReptCurrEnum? ReptCurr { get; set; }
         /// <summary>
@@ -99,6 +100,7 @@ namespace Org.OpenAPITools.Model
         /// The Ethereum contract address to identify the collection.
         /// </summary>
         /// <value>The Ethereum contract address to identify the collection.</value>
+        /// <example>&quot;0x7bd29408f11d2bfc23c34f18275bbf23bb716bc7&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -106,6 +108,7 @@ namespace Org.OpenAPITools.Model
         /// The interval at which to return OHLC, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.
         /// </summary>
         /// <value>The interval at which to return OHLC, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.</value>
+        /// <example>&quot;1D&quot;</example>
         [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
@@ -113,6 +116,7 @@ namespace Org.OpenAPITools.Model
         /// An attribute of the NFT to group results by.
         /// </summary>
         /// <value>An attribute of the NFT to group results by.</value>
+        /// <example>&quot;Hat&quot;</example>
         [DataMember(Name = "group_by", EmitDefaultValue = false)]
         public string GroupBy { get; set; }
 
@@ -120,6 +124,7 @@ namespace Org.OpenAPITools.Model
         /// If &#39;true&#39;, response dicts contain OHLCV
         /// </summary>
         /// <value>If &#39;true&#39;, response dicts contain OHLCV</value>
+        /// <example>false</example>
         [DataMember(Name = "volume", EmitDefaultValue = true)]
         public bool Volume { get; set; }
 
@@ -127,6 +132,7 @@ namespace Org.OpenAPITools.Model
         /// If &#39;true&#39;, append number of trades to OHLC(V)
         /// </summary>
         /// <value>If &#39;true&#39;, append number of trades to OHLC(V)</value>
+        /// <example>false</example>
         [DataMember(Name = "n_trades", EmitDefaultValue = true)]
         public bool NTrades { get; set; }
 
@@ -134,6 +140,7 @@ namespace Org.OpenAPITools.Model
         /// The start date to pull data for calculations
         /// </summary>
         /// <value>The start date to pull data for calculations</value>
+        /// <example>&quot;2021-08-01&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -141,6 +148,7 @@ namespace Org.OpenAPITools.Model
         /// The end date to pull data for calculations
         /// </summary>
         /// <value>The end date to pull data for calculations</value>
+        /// <example>&quot;2022-03-04&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 
@@ -148,6 +156,7 @@ namespace Org.OpenAPITools.Model
         /// Exclude suspected wash transactions?
         /// </summary>
         /// <value>Exclude suspected wash transactions?</value>
+        /// <example>true</example>
         [DataMember(Name = "exclude_wash", EmitDefaultValue = true)]
         public bool ExcludeWash { get; set; }
 

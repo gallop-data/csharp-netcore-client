@@ -59,6 +59,7 @@ namespace Org.OpenAPITools.Model
         /// The contract address of the collection.
         /// </summary>
         /// <value>The contract address of the collection.</value>
+        /// <example>&quot;0x3f5fb35468e9834a43dca1c160c69eaae78b6360&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -73,6 +74,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 

@@ -63,6 +63,7 @@ namespace Org.OpenAPITools.Model
         /// The Ethereum contract address to identify the collection.
         /// </summary>
         /// <value>The Ethereum contract address to identify the collection.</value>
+        /// <example>&quot;0x0c2e57efddba8c768147d1fdf9176a0a6ebd5d83&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -70,6 +71,7 @@ namespace Org.OpenAPITools.Model
         /// The interval at which to return OHLC, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.
         /// </summary>
         /// <value>The interval at which to return OHLC, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.</value>
+        /// <example>&quot;1D&quot;</example>
         [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
@@ -77,6 +79,7 @@ namespace Org.OpenAPITools.Model
         /// An attribute of the NFT to group results by.
         /// </summary>
         /// <value>An attribute of the NFT to group results by.</value>
+        /// <example>&quot;Background&quot;</example>
         [DataMember(Name = "group_by", EmitDefaultValue = false)]
         public string GroupBy { get; set; }
 
@@ -84,6 +87,7 @@ namespace Org.OpenAPITools.Model
         /// The start date to pull data for calculations
         /// </summary>
         /// <value>The start date to pull data for calculations</value>
+        /// <example>&quot;2022-04-29&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -91,6 +95,7 @@ namespace Org.OpenAPITools.Model
         /// The end date to pull data for calculations
         /// </summary>
         /// <value>The end date to pull data for calculations</value>
+        /// <example>&quot;2022-07-29&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 

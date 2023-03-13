@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// The transaction hash to valildate.
         /// </summary>
         /// <value>The transaction hash to valildate.</value>
+        /// <example>&quot;0x40692e18987ef5237cb0f9f0eaf8898e044a140b94d1cfc2a66dc9eb39033c1a&quot;</example>
         [DataMember(Name = "transaction_hash", IsRequired = true, EmitDefaultValue = true)]
         public string TransactionHash { get; set; }
 

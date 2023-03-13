@@ -58,6 +58,7 @@ namespace Org.OpenAPITools.Model
         /// The distribution assumed to calculate parametric risk for
         /// </summary>
         /// <value>The distribution assumed to calculate parametric risk for</value>
+        /// <example>&quot;norm&quot;</example>
         [DataMember(Name = "dist", EmitDefaultValue = false)]
         public DistEnum? Dist { get; set; }
         /// <summary>
@@ -86,6 +87,7 @@ namespace Org.OpenAPITools.Model
         /// The currency to report results in
         /// </summary>
         /// <value>The currency to report results in</value>
+        /// <example>&quot;sol&quot;</example>
         [DataMember(Name = "rept_curr", EmitDefaultValue = false)]
         public ReptCurrEnum? ReptCurr { get; set; }
         /// <summary>
@@ -146,6 +148,7 @@ namespace Org.OpenAPITools.Model
         /// The Gallop tag to identify the collection.
         /// </summary>
         /// <value>The Gallop tag to identify the collection.</value>
+        /// <example>&quot;shadowysupercoder&quot;</example>
         [DataMember(Name = "collection_tag", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionTag { get; set; }
 
@@ -153,6 +156,7 @@ namespace Org.OpenAPITools.Model
         /// The holding period to evaluate risk for, e.g. &#x60;12M&#x60;
         /// </summary>
         /// <value>The holding period to evaluate risk for, e.g. &#x60;12M&#x60;</value>
+        /// <example>&quot;4M&quot;</example>
         [DataMember(Name = "holding_period", IsRequired = true, EmitDefaultValue = true)]
         public string HoldingPeriod { get; set; }
 
@@ -167,6 +171,7 @@ namespace Org.OpenAPITools.Model
         /// The amount of tokens in your portfolio
         /// </summary>
         /// <value>The amount of tokens in your portfolio</value>
+        /// <example>1</example>
         [DataMember(Name = "amount", EmitDefaultValue = false)]
         public int Amount { get; set; }
 
@@ -174,6 +179,7 @@ namespace Org.OpenAPITools.Model
         /// The start date to pull data for calculations
         /// </summary>
         /// <value>The start date to pull data for calculations</value>
+        /// <example>&quot;2021-08-01&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -181,6 +187,7 @@ namespace Org.OpenAPITools.Model
         /// The end date to pull data for calculations
         /// </summary>
         /// <value>The end date to pull data for calculations</value>
+        /// <example>&quot;2022-02-04&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 
@@ -188,6 +195,7 @@ namespace Org.OpenAPITools.Model
         /// Whether to winsorize time series outliers prior to calculating risk
         /// </summary>
         /// <value>Whether to winsorize time series outliers prior to calculating risk</value>
+        /// <example>true</example>
         [DataMember(Name = "wins_outliers", EmitDefaultValue = true)]
         public bool WinsOutliers { get; set; }
 
@@ -195,6 +203,7 @@ namespace Org.OpenAPITools.Model
         /// The rate of return for an asset deemed risk free in the contemplated holding period
         /// </summary>
         /// <value>The rate of return for an asset deemed risk free in the contemplated holding period</value>
+        /// <example>0.001</example>
         [DataMember(Name = "risk_free_rate", EmitDefaultValue = false)]
         public decimal RiskFreeRate { get; set; }
 
@@ -202,6 +211,7 @@ namespace Org.OpenAPITools.Model
         /// The interval at which to calculate returns to base the forecasts upon, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.
         /// </summary>
         /// <value>The interval at which to calculate returns to base the forecasts upon, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.</value>
+        /// <example>&quot;1D&quot;</example>
         [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
@@ -209,6 +219,7 @@ namespace Org.OpenAPITools.Model
         /// Exclude suspected wash transactions?
         /// </summary>
         /// <value>Exclude suspected wash transactions?</value>
+        /// <example>true</example>
         [DataMember(Name = "exclude_wash", EmitDefaultValue = true)]
         public bool ExcludeWash { get; set; }
 
@@ -216,6 +227,7 @@ namespace Org.OpenAPITools.Model
         /// If true, report drawdown volatility (based on negative returns only).
         /// </summary>
         /// <value>If true, report drawdown volatility (based on negative returns only).</value>
+        /// <example>false</example>
         [DataMember(Name = "drawdown", EmitDefaultValue = true)]
         public bool Drawdown { get; set; }
 

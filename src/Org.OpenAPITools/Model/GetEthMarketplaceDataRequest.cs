@@ -73,6 +73,7 @@ namespace Org.OpenAPITools.Model
         /// Return normalized data across marketplaces
         /// </summary>
         /// <value>Return normalized data across marketplaces</value>
+        /// <example>true</example>
         [DataMember(Name = "normalized", EmitDefaultValue = true)]
         public bool Normalized { get; set; }
 

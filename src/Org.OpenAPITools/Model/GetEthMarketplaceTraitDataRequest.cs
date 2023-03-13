@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// The contract address of the collection.
         /// </summary>
         /// <value>The contract address of the collection.</value>
+        /// <example>&quot;0xbc4ca0eda7647a8ab7c2061c2e118a18a936f13d&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 

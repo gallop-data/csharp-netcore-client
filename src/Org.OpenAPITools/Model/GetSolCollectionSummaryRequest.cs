@@ -58,6 +58,7 @@ namespace Org.OpenAPITools.Model
         /// The currency to report results in
         /// </summary>
         /// <value>The currency to report results in</value>
+        /// <example>&quot;sol&quot;</example>
         [DataMember(Name = "rept_curr", EmitDefaultValue = false)]
         public ReptCurrEnum? ReptCurr { get; set; }
         /// <summary>
@@ -93,6 +94,7 @@ namespace Org.OpenAPITools.Model
         /// The Gallop tag to identify the collection.
         /// </summary>
         /// <value>The Gallop tag to identify the collection.</value>
+        /// <example>&quot;shadowysupercoder&quot;</example>
         [DataMember(Name = "collection_tag", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionTag { get; set; }
 
@@ -100,6 +102,7 @@ namespace Org.OpenAPITools.Model
         /// An attribute of the NFT.
         /// </summary>
         /// <value>An attribute of the NFT.</value>
+        /// <example>&quot;Favorite Programming Language&quot;</example>
         [DataMember(Name = "group_by", EmitDefaultValue = false)]
         public string GroupBy { get; set; }
 
@@ -107,6 +110,7 @@ namespace Org.OpenAPITools.Model
         /// The start date to pull data for calculations
         /// </summary>
         /// <value>The start date to pull data for calculations</value>
+        /// <example>&quot;2021-08-01&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -114,6 +118,7 @@ namespace Org.OpenAPITools.Model
         /// The end date to pull data for calculations
         /// </summary>
         /// <value>The end date to pull data for calculations</value>
+        /// <example>&quot;2022-03-04&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 
@@ -121,6 +126,7 @@ namespace Org.OpenAPITools.Model
         /// Exclude suspected wash transactions?
         /// </summary>
         /// <value>Exclude suspected wash transactions?</value>
+        /// <example>true</example>
         [DataMember(Name = "exclude_wash", EmitDefaultValue = true)]
         public bool ExcludeWash { get; set; }
 

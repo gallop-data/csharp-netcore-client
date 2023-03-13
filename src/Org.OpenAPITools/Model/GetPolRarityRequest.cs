@@ -59,6 +59,7 @@ namespace Org.OpenAPITools.Model
         /// The Polygon contract address to identify the collection.
         /// </summary>
         /// <value>The Polygon contract address to identify the collection.</value>
+        /// <example>&quot;0xfbe3ab0cbfbd17d06bdd73aa3f55aaf038720f59&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 

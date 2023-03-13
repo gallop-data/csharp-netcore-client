@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// Collection_tag
         /// </summary>
         /// <value>Collection_tag</value>
+        /// <example>&quot;downtowngirlz&quot;</example>
         [DataMember(Name = "collection_tag", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionTag { get; set; }
 

@@ -64,6 +64,7 @@ namespace Org.OpenAPITools.Model
         /// Type of statistical forecasting model to be calculated as a 3-char string, e.g. &#39;arc&#39; for ARCH
         /// </summary>
         /// <value>Type of statistical forecasting model to be calculated as a 3-char string, e.g. &#39;arc&#39; for ARCH</value>
+        /// <example>&quot;har&quot;</example>
         [DataMember(Name = "voltype", EmitDefaultValue = false)]
         public VoltypeEnum? Voltype { get; set; }
         /// <summary>
@@ -92,6 +93,7 @@ namespace Org.OpenAPITools.Model
         /// The distribution assumed to calculate parametric risk for
         /// </summary>
         /// <value>The distribution assumed to calculate parametric risk for</value>
+        /// <example>&quot;norm&quot;</example>
         [DataMember(Name = "dist", EmitDefaultValue = false)]
         public DistEnum? Dist { get; set; }
         /// <summary>
@@ -120,6 +122,7 @@ namespace Org.OpenAPITools.Model
         /// The currency to report results in
         /// </summary>
         /// <value>The currency to report results in</value>
+        /// <example>&quot;sol&quot;</example>
         [DataMember(Name = "rept_curr", EmitDefaultValue = false)]
         public ReptCurrEnum? ReptCurr { get; set; }
         /// <summary>
@@ -169,6 +172,7 @@ namespace Org.OpenAPITools.Model
         /// The Gallop tag to identify the collection.
         /// </summary>
         /// <value>The Gallop tag to identify the collection.</value>
+        /// <example>&quot;shadowysupercoder&quot;</example>
         [DataMember(Name = "collection_tag", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionTag { get; set; }
 
@@ -183,6 +187,7 @@ namespace Org.OpenAPITools.Model
         /// The forecast horizon (i.e. the number of periods to forecast out)
         /// </summary>
         /// <value>The forecast horizon (i.e. the number of periods to forecast out)</value>
+        /// <example>5</example>
         [DataMember(Name = "horizon", EmitDefaultValue = false)]
         public int Horizon { get; set; }
 
@@ -190,6 +195,7 @@ namespace Org.OpenAPITools.Model
         /// The interval at which to calculate returns to base the forecasts upon, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.
         /// </summary>
         /// <value>The interval at which to calculate returns to base the forecasts upon, e.g. &#x60;1D&#x60; for daily, &#x60;1M&#x60; for monthly etc.</value>
+        /// <example>&quot;1D&quot;</example>
         [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
@@ -197,6 +203,7 @@ namespace Org.OpenAPITools.Model
         /// The start date to pull data for calculations
         /// </summary>
         /// <value>The start date to pull data for calculations</value>
+        /// <example>&quot;2021-01-01&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -204,6 +211,7 @@ namespace Org.OpenAPITools.Model
         /// The end date to pull data for calculations
         /// </summary>
         /// <value>The end date to pull data for calculations</value>
+        /// <example>&quot;2022-02-25&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 
@@ -211,6 +219,7 @@ namespace Org.OpenAPITools.Model
         /// Set to True, returns confidencve intervals at alpha significance for price on top of forecasts for returns and volatilities
         /// </summary>
         /// <value>Set to True, returns confidencve intervals at alpha significance for price on top of forecasts for returns and volatilities</value>
+        /// <example>true</example>
         [DataMember(Name = "return_price_forecasts", EmitDefaultValue = true)]
         public bool ReturnPriceForecasts { get; set; }
 
@@ -218,6 +227,7 @@ namespace Org.OpenAPITools.Model
         /// The significance level, e.g. 0.05 for 95% confidence
         /// </summary>
         /// <value>The significance level, e.g. 0.05 for 95% confidence</value>
+        /// <example>0.05</example>
         [DataMember(Name = "alpha", EmitDefaultValue = false)]
         public decimal Alpha { get; set; }
 
@@ -225,6 +235,7 @@ namespace Org.OpenAPITools.Model
         /// Exclude suspected wash transactions?
         /// </summary>
         /// <value>Exclude suspected wash transactions?</value>
+        /// <example>true</example>
         [DataMember(Name = "exclude_wash", EmitDefaultValue = true)]
         public bool ExcludeWash { get; set; }
 

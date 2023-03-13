@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**WalletAddress** | **string** | The wallet address to search. | [optional] 
+**WalletAddress** | **string** | The wallet address to search. | 
 **Page** | **int** | The pagination cursor. | [optional] 
 **PageSize** | **int** | The number of records returned per page. | [optional] 
 

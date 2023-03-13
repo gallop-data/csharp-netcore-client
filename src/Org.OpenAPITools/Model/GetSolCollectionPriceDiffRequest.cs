@@ -61,6 +61,7 @@ namespace Org.OpenAPITools.Model
         /// The Gallop tag to identify the collection.
         /// </summary>
         /// <value>The Gallop tag to identify the collection.</value>
+        /// <example>&quot;shadowysupercoder&quot;</example>
         [DataMember(Name = "collection_tag", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionTag { get; set; }
 
@@ -68,6 +69,7 @@ namespace Org.OpenAPITools.Model
         /// The start date to pull data for calculations
         /// </summary>
         /// <value>The start date to pull data for calculations</value>
+        /// <example>&quot;2021-08-01&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -75,6 +77,7 @@ namespace Org.OpenAPITools.Model
         /// The end date to pull data for calculations
         /// </summary>
         /// <value>The end date to pull data for calculations</value>
+        /// <example>&quot;2022-03-04&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 
@@ -82,6 +85,7 @@ namespace Org.OpenAPITools.Model
         /// Exclude suspected wash transactions?
         /// </summary>
         /// <value>Exclude suspected wash transactions?</value>
+        /// <example>true</example>
         [DataMember(Name = "exclude_wash", EmitDefaultValue = true)]
         public bool ExcludeWash { get; set; }
 

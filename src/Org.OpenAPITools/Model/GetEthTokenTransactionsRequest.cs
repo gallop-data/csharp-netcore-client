@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -107,6 +108,7 @@ namespace Org.OpenAPITools.Model
         /// The contract address the token belongs to.
         /// </summary>
         /// <value>The contract address the token belongs to.</value>
+        /// <example>&quot;0xb47e3cd837ddf8e4c57f05d70ab865de6e193bbb&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -114,6 +116,7 @@ namespace Org.OpenAPITools.Model
         /// The token id.
         /// </summary>
         /// <value>The token id.</value>
+        /// <example>&quot;6000&quot;</example>
         [DataMember(Name = "token_id", IsRequired = true, EmitDefaultValue = true)]
         public string TokenId { get; set; }
 
@@ -121,6 +124,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 
@@ -128,6 +132,7 @@ namespace Org.OpenAPITools.Model
         /// The earliest block timestamp.
         /// </summary>
         /// <value>The earliest block timestamp.</value>
+        /// <example>&quot;2021-01-01&quot;</example>
         [DataMember(Name = "start_date", EmitDefaultValue = false)]
         public string StartDate { get; set; }
 
@@ -135,6 +140,7 @@ namespace Org.OpenAPITools.Model
         /// The oldest block number to return.
         /// </summary>
         /// <value>The oldest block number to return.</value>
+        /// <example>100</example>
         [DataMember(Name = "start_block_number", EmitDefaultValue = false)]
         public int StartBlockNumber { get; set; }
 
@@ -142,6 +148,7 @@ namespace Org.OpenAPITools.Model
         /// The latest block timestamp.
         /// </summary>
         /// <value>The latest block timestamp.</value>
+        /// <example>&quot;2022-02-25&quot;</example>
         [DataMember(Name = "end_date", EmitDefaultValue = false)]
         public string EndDate { get; set; }
 

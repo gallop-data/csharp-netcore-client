@@ -65,16 +65,27 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="GetEthWalletTransactionsRequest" /> class.
         /// </summary>
-        /// <param name="walletAddress">The wallet address to search..</param>
+        [JsonConstructorAttribute]
+        protected GetEthWalletTransactionsRequest() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="GetEthWalletTransactionsRequest" /> class.
+        /// </summary>
+        /// <param name="walletAddress">The wallet address to search. (required).</param>
         /// <param name="page">The pagination cursor..</param>
         /// <param name="pageSize">The number of records returned per page..</param>
         public GetEthWalletTransactionsRequest(string walletAddress = default(string), int page = default(int), PageSizeEnum? pageSize = default(PageSizeEnum?))
         {
+            // to ensure "walletAddress" is required (not null)
+            if (walletAddress == null)
+            {
+                throw new ArgumentNullException("walletAddress is a required property for GetEthWalletTransactionsRequest and cannot be null");
+            }
             this.WalletAddress = walletAddress;
             this.Page = page;
             this.PageSize = pageSize;
@@ -84,13 +95,15 @@ namespace Org.OpenAPITools.Model
         /// The wallet address to search.
         /// </summary>
         /// <value>The wallet address to search.</value>
-        [DataMember(Name = "wallet_address", EmitDefaultValue = false)]
+        /// <example>&quot;0xe724e14c6b7599b710804df390e39928abfed082&quot;</example>
+        [DataMember(Name = "wallet_address", IsRequired = true, EmitDefaultValue = true)]
         public string WalletAddress { get; set; }
 
         /// <summary>
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 

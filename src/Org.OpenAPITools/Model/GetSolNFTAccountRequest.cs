@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// The Solana token mint address.
         /// </summary>
         /// <value>The Solana token mint address.</value>
+        /// <example>&quot;G6oNTZRyrU2tN1YnWREmFaLwEcMA7QDoCscxon4Xrkbp&quot;</example>
         [DataMember(Name = "mint_address", IsRequired = true, EmitDefaultValue = true)]
         public string MintAddress { get; set; }
 

@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -93,6 +94,7 @@ namespace Org.OpenAPITools.Model
         /// The value to sort by. Defaults to created_at
         /// </summary>
         /// <value>The value to sort by. Defaults to created_at</value>
+        /// <example>&quot;created_at&quot;</example>
         [DataMember(Name = "sort_by", EmitDefaultValue = false)]
         public SortByEnum? SortBy { get; set; }
         /// <summary>
@@ -118,6 +120,7 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
 
@@ -125,6 +128,7 @@ namespace Org.OpenAPITools.Model
         /// The name of the collection searched.
         /// </summary>
         /// <value>The name of the collection searched.</value>
+        /// <example>&quot;punks&quot;</example>
         [DataMember(Name = "collection_name", EmitDefaultValue = false)]
         public string CollectionName { get; set; }
 
@@ -132,6 +136,7 @@ namespace Org.OpenAPITools.Model
         /// Only return collections that have traded.
         /// </summary>
         /// <value>Only return collections that have traded.</value>
+        /// <example>true</example>
         [DataMember(Name = "traded", EmitDefaultValue = true)]
         public bool Traded { get; set; }
 
@@ -139,6 +144,7 @@ namespace Org.OpenAPITools.Model
         /// Only return collections recorded after this day [YYYY-MM-DD]
         /// </summary>
         /// <value>Only return collections recorded after this day [YYYY-MM-DD]</value>
+        /// <example>&quot;2023-01-15&quot;</example>
         [DataMember(Name = "created_after", EmitDefaultValue = false)]
         public string CreatedAfter { get; set; }
 

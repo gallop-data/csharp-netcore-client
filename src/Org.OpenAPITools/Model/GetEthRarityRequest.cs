@@ -59,6 +59,7 @@ namespace Org.OpenAPITools.Model
         /// The Ethereum contract address to identify the collection.
         /// </summary>
         /// <value>The Ethereum contract address to identify the collection.</value>
+        /// <example>&quot;0x716039ab9ce2780e35450b86dc6420f22460c380&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 

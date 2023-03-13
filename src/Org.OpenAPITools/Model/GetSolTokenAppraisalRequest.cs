@@ -58,6 +58,7 @@ namespace Org.OpenAPITools.Model
         /// The currency to report results in
         /// </summary>
         /// <value>The currency to report results in</value>
+        /// <example>&quot;sol&quot;</example>
         [DataMember(Name = "rept_curr", EmitDefaultValue = false)]
         public ReptCurrEnum? ReptCurr { get; set; }
         /// <summary>
@@ -100,6 +101,7 @@ namespace Org.OpenAPITools.Model
         /// The interval at which to calculate intermediate results and forecasts.
         /// </summary>
         /// <value>The interval at which to calculate intermediate results and forecasts.</value>
+        /// <example>&quot;1W&quot;</example>
         [DataMember(Name = "frequency", EmitDefaultValue = false)]
         public string Frequency { get; set; }
 
@@ -107,6 +109,7 @@ namespace Org.OpenAPITools.Model
         /// The forecast horizon (i.e. the number of periods to forecast out). Defaults to zero which only returns nowcasts.
         /// </summary>
         /// <value>The forecast horizon (i.e. the number of periods to forecast out). Defaults to zero which only returns nowcasts.</value>
+        /// <example>5</example>
         [DataMember(Name = "horizon", EmitDefaultValue = false)]
         public int Horizon { get; set; }
 
@@ -114,6 +117,7 @@ namespace Org.OpenAPITools.Model
         /// The significance level for the liquidation estimate, e.g. 0.05 for 95% confidence
         /// </summary>
         /// <value>The significance level for the liquidation estimate, e.g. 0.05 for 95% confidence</value>
+        /// <example>0.1</example>
         [DataMember(Name = "alpha", EmitDefaultValue = false)]
         public decimal Alpha { get; set; }
 
@@ -121,6 +125,7 @@ namespace Org.OpenAPITools.Model
         /// Exclude suspected wash transactions?
         /// </summary>
         /// <value>Exclude suspected wash transactions?</value>
+        /// <example>true</example>
         [DataMember(Name = "exclude_wash", EmitDefaultValue = true)]
         public bool ExcludeWash { get; set; }
 

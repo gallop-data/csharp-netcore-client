@@ -58,6 +58,7 @@ namespace Org.OpenAPITools.Model
         /// The currency to report results in
         /// </summary>
         /// <value>The currency to report results in</value>
+        /// <example>&quot;eth&quot;</example>
         [DataMember(Name = "rept_curr", EmitDefaultValue = false)]
         public ReptCurrEnum? ReptCurr { get; set; }
         /// <summary>
@@ -96,6 +97,7 @@ namespace Org.OpenAPITools.Model
         /// The contract address of the token collection.
         /// </summary>
         /// <value>The contract address of the token collection.</value>
+        /// <example>&quot;0x3f5fb35468e9834a43dca1c160c69eaae78b6360&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -103,6 +105,7 @@ namespace Org.OpenAPITools.Model
         /// The holding period to evaluate risk for, e.g. &#39;12M&#39;
         /// </summary>
         /// <value>The holding period to evaluate risk for, e.g. &#39;12M&#39;</value>
+        /// <example>&quot;6M&quot;</example>
         [DataMember(Name = "holding_period", IsRequired = true, EmitDefaultValue = true)]
         public string HoldingPeriod { get; set; }
 
@@ -110,6 +113,7 @@ namespace Org.OpenAPITools.Model
         /// The amount of tokens in your portfolio
         /// </summary>
         /// <value>The amount of tokens in your portfolio</value>
+        /// <example>1</example>
         [DataMember(Name = "amount", EmitDefaultValue = false)]
         public int Amount { get; set; }
 
@@ -117,6 +121,7 @@ namespace Org.OpenAPITools.Model
         /// If true, report drawdown volatility (based on negative returns only).
         /// </summary>
         /// <value>If true, report drawdown volatility (based on negative returns only).</value>
+        /// <example>false</example>
         [DataMember(Name = "drawdown", EmitDefaultValue = true)]
         public bool Drawdown { get; set; }
 

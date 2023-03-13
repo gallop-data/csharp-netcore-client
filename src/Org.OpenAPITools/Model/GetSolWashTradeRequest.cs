@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// The first signature to valildate.
         /// </summary>
         /// <value>The first signature to valildate.</value>
+        /// <example>&quot;jAV6y8eKCACX9bwNaiVgh6mqoxiCHrovWSYVXWmZfj5EhHDmXHeu23DwgnvnPQHjudKj9DK5ed73zq2yAkaJtqg&quot;</example>
         [DataMember(Name = "first_signature", IsRequired = true, EmitDefaultValue = true)]
         public string FirstSignature { get; set; }
 

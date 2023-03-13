@@ -65,6 +65,7 @@ namespace Org.OpenAPITools.Model
         /// The number of records returned per page.
         /// </summary>
         /// <value>The number of records returned per page.</value>
+        /// <example>100</example>
         [DataMember(Name = "page_size", EmitDefaultValue = false)]
         public PageSizeEnum? PageSize { get; set; }
         /// <summary>
@@ -123,6 +124,7 @@ namespace Org.OpenAPITools.Model
         /// The type of event: list, transfer, offer, mint, sale, cancel_list or cancel_offer
         /// </summary>
         /// <value>The type of event: list, transfer, offer, mint, sale, cancel_list or cancel_offer</value>
+        /// <example>&quot;sale&quot;</example>
         [DataMember(Name = "event_type", EmitDefaultValue = false)]
         public EventTypeEnum? EventType { get; set; }
         /// <summary>
@@ -137,8 +139,9 @@ namespace Org.OpenAPITools.Model
         /// <param name="tokenId">The id for the token..</param>
         /// <param name="page">The pagination cursor..</param>
         /// <param name="pageSize">The number of records returned per page..</param>
+        /// <param name="eventDate">Only return events occuring after this day [YYYY-MM-DD].</param>
         /// <param name="eventType">The type of event: list, transfer, offer, mint, sale, cancel_list or cancel_offer.</param>
-        public GetEthHistoricalEventsRequest(string collectionAddress = default(string), string tokenId = default(string), int page = default(int), PageSizeEnum? pageSize = default(PageSizeEnum?), EventTypeEnum? eventType = default(EventTypeEnum?))
+        public GetEthHistoricalEventsRequest(string collectionAddress = default(string), string tokenId = default(string), int page = default(int), PageSizeEnum? pageSize = default(PageSizeEnum?), string eventDate = default(string), EventTypeEnum? eventType = default(EventTypeEnum?))
         {
             // to ensure "collectionAddress" is required (not null)
             if (collectionAddress == null)
@@ -149,6 +152,7 @@ namespace Org.OpenAPITools.Model
             this.TokenId = tokenId;
             this.Page = page;
             this.PageSize = pageSize;
+            this.EventDate = eventDate;
             this.EventType = eventType;
         }
 
@@ -156,6 +160,7 @@ namespace Org.OpenAPITools.Model
         /// The contract address of a collection.
         /// </summary>
         /// <value>The contract address of a collection.</value>
+        /// <example>&quot;0x3fe1a4c1481c8351e91b64d5c398b159de07cbc5&quot;</example>
         [DataMember(Name = "collection_address", IsRequired = true, EmitDefaultValue = true)]
         public string CollectionAddress { get; set; }
 
@@ -163,6 +168,7 @@ namespace Org.OpenAPITools.Model
         /// The id for the token.
         /// </summary>
         /// <value>The id for the token.</value>
+        /// <example>&quot;2868&quot;</example>
         [DataMember(Name = "token_id", EmitDefaultValue = false)]
         public string TokenId { get; set; }
 
@@ -170,8 +176,17 @@ namespace Org.OpenAPITools.Model
         /// The pagination cursor.
         /// </summary>
         /// <value>The pagination cursor.</value>
+        /// <example>1</example>
         [DataMember(Name = "page", EmitDefaultValue = false)]
         public int Page { get; set; }
+
+        /// <summary>
+        /// Only return events occuring after this day [YYYY-MM-DD]
+        /// </summary>
+        /// <value>Only return events occuring after this day [YYYY-MM-DD]</value>
+        /// <example>&quot;2023-01-15&quot;</example>
+        [DataMember(Name = "event_date", EmitDefaultValue = false)]
+        public string EventDate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -185,6 +200,7 @@ namespace Org.OpenAPITools.Model
             sb.Append("  TokenId: ").Append(TokenId).Append("\n");
             sb.Append("  Page: ").Append(Page).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            sb.Append("  EventDate: ").Append(EventDate).Append("\n");
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -240,6 +256,11 @@ namespace Org.OpenAPITools.Model
                     this.PageSize.Equals(input.PageSize)
                 ) && 
                 (
+                    this.EventDate == input.EventDate ||
+                    (this.EventDate != null &&
+                    this.EventDate.Equals(input.EventDate))
+                ) && 
+                (
                     this.EventType == input.EventType ||
                     this.EventType.Equals(input.EventType)
                 );
@@ -264,6 +285,10 @@ namespace Org.OpenAPITools.Model
                 }
                 hashCode = (hashCode * 59) + this.Page.GetHashCode();
                 hashCode = (hashCode * 59) + this.PageSize.GetHashCode();
+                if (this.EventDate != null)
+                {
+                    hashCode = (hashCode * 59) + this.EventDate.GetHashCode();
+                }
                 hashCode = (hashCode * 59) + this.EventType.GetHashCode();
                 return hashCode;
             }

@@ -45,6 +45,7 @@ namespace Org.OpenAPITools.Model
         /// The tag of the collection.
         /// </summary>
         /// <value>The tag of the collection.</value>
+        /// <example>&quot;solanamonkerejectsget&quot;</example>
         [DataMember(Name = "collection_tag", EmitDefaultValue = false)]
         public string CollectionTag { get; set; }
 

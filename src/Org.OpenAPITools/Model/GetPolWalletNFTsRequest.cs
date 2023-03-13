@@ -55,6 +55,7 @@ namespace Org.OpenAPITools.Model
         /// The wallet address to search.
         /// </summary>
         /// <value>The wallet address to search.</value>
+        /// <example>&quot;0xab0cda4cc21207fd9433356afe9428b6fac8a8a5&quot;</example>
         [DataMember(Name = "wallet_address", IsRequired = true, EmitDefaultValue = true)]
         public string WalletAddress { get; set; }
 
